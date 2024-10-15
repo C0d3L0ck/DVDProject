@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BA74C29-FCE2-472D-A52B-686EA964AB5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoIUJO</RootNamespace>
+    <AssemblyName>ProyectoIUJO</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Clientes.cs" />
+    <Compile Include="Clases\ClientesColeccion.cs" />
+    <Compile Include="Clases\DVD.cs" />
+    <Compile Include="Clases\DVDColeccion.cs" />
+    <Compile Include="Clases\Prestamos.cs" />
+    <Compile Include="Clases\PrestamosColeccion.cs" />
+    <Compile Include="Formularios\ClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ClientesForm.Designer.cs">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Consultar.Designer.cs">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DVDMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\DVDMenuForm.Designer.cs">
+      <DependentUpon>DVDMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptMD5.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\IngresosMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\IngresosMenu.Designer.cs">
+      <DependentUpon>IngresosMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\InicioMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\InicioMenu.Designer.cs">
+      <DependentUpon>InicioMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MostrarImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MostrarImagen.Designer.cs">
+      <DependentUpon>MostrarImagen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PrestamosMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PrestamosMenu.Designer.cs">
+      <DependentUpon>PrestamosMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\ClientesForm.resx">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Consultar.resx">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\DVDMenuForm.resx">
+      <DependentUpon>DVDMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\IngresosMenu.resx">
+      <DependentUpon>IngresosMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\InicioMenu.resx">
+      <DependentUpon>InicioMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MostrarImagen.resx">
+      <DependentUpon>MostrarImagen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PrestamosMenu.resx">
+      <DependentUpon>PrestamosMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMG\Diagrama-Ingreso.png" />
+    <Content Include="IMG\compact-disk.png" />
+    <Content Include="IMG\home24pixels.png" />
+    <Content Include="IMG\dvd24.png" />
+    <Content Include="IMG\Elita.png" />
+    <Content Include="IMG\Flechaabajo.png" />
+    <Content Include="IMG\actualizar.png" />
+    <Content Include="IMG\money-bag.png" />
+    <Content Include="IMG\NocheColonia.jpg" />
+    <Content Include="IMG\PlayReal.png" />
+    <Content Include="IMG\technologies.png" />
+    <Content Include="IMG\usuario.png" />
+    <Content Include="IMG\password.png" />
+    <Content Include="IMG\user.png" />
+    <Content Include="IMG\hola.wav" />
+    <None Include="Resources\JUNIOR %282%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
